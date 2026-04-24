@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    
+    
+    <title>介護保険の訪問看護・通所介護 報酬構造の学習ノート</title>
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        max-width: 1100px; /* ユーザー要件に合わせて少し広め */
+        margin: 0 auto;
+        padding: 32px 40px;
+        font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+        color: #333;
+        background-color: #fff;
+        line-height: 1.6;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 1.8em;
+        color: #1e3a8a;
+        border-bottom: 2px solid #1e3a8a;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+      }
+      .subtitle {
+        font-size: 1.1em;
+        color: #475569;
+        margin-bottom: 20px;
+      }
+      .date-note {
+        font-size: 0.9em;
+        text-align: right;
+        color: #64748b;
+        margin-bottom: 30px;
+      }
+      h2 {
+        font-size: 1.4em;
+        color: #2563eb;
+        border-left: 5px solid #2563eb;
+        padding-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 1.2em;
+        color: #1e40af;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+      p,
+      li,
+      td,
+      th {
+        font-size: 0.95em;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      th,
+      td {
+        border: 1px solid #cbd5e1;
+        padding: 8px 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f1f5f9;
+        font-weight: bold;
+        color: #1e3a8a;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      tr:nth-child(even) {
+        background-color: #f8fafc;
+      }
+      tbody tr:hover {
+        background-color: #eaf2ff;
+      }
+      .card {
+        border: 1px solid #93c5fd;
+        background-color: #eff6ff;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      .card h4 {
+        margin-top: 0;
+        color: #1d4ed8;
+        font-size: 1.1em;
+      }
+      .badge {
+        background-color: #dbeafe;
+        color: #1e40af;
+        border: 1px solid #bfdbfe;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 0.85em;
+        margin: 0 2px;
+        display: inline-block;
+      }
+      .formula-box {
+        border: 2px solid #2563eb;
+        background-color: #f8fafc;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin: 20px 0;
+      }
+      .note-box {
+        border: 1px solid #fcd34d;
+        background-color: #fffbeb;
+        padding: 10px 15px;
+        margin: 15px 0;
+        color: #b45309;
+      }
+      .flow-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        padding: 15px;
+        font-weight: bold;
+        color: #334155;
+        margin-bottom: 15px;
+      }
+      .compare-container {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .compare-col {
+        flex: 1;
+        border: 1px solid #cbd5e1;
+        padding: 15px;
+        background-color: #f8fafc;
+      }
+      .compare-col h4 {
+        color: #2563eb;
+        border-bottom: 1px solid #cbd5e1;
+        padding-bottom: 5px;
+        margin-top: 0;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      .toc {
+        background-color: #f8fafc;
+        border: 1px solid #cbd5e1;
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+      .toc h2 {
+        margin-top: 0;
+        font-size: 1.2em;
+        border-left: none;
+        padding-left: 0;
+        color: #334155;
+      }
+      .toc ul {
+        list-style-type: none;
+        padding-left: 10px;
+        margin: 0;
+      }
+      .toc li {
+        margin-bottom: 5px;
+      }
+      .toc a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+      .footer-note {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #cbd5e1;
+        font-size: 0.85em;
+        color: #64748b;
+      }
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 16px;
+        }
+        .compare-container,
+        .flow-box {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .flow-box > div {
+          margin: 4px 0;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <h1>介護保険の訪問看護・通所介護 報酬構造の学習ノート</h1>
+    <div class="subtitle">制度理解と実務運用をつなぐ整理版</div>
+    <div class="date-note">
+      作成日：2026-04-23<br>
+      ※令和6年度介護報酬改定ベース
+    </div>
+
+    <div class="card">
+      <h4>要点1：<span class="badge">区分支給限度基準額</span>は「介護保険で使えるサービス量の上限」</h4>
+      <p>「自己負担上限」ではなく、介護保険給付の枠です。これを超えた分は全額自己負担となります。</p>
+    </div>
+    <div class="card">
+      <h4>
+        要点2：事業所売上は「基本報酬 + <span class="badge">加算</span> - <span class="badge">減算</span>」で決まる
+      </h4>
+      <p>提供内容や体制による加算と、基準未達等による減算の組み合わせで報酬が計算されます。</p>
+    </div>
+    <div class="card">
+      <h4>要点3：ケアマネは全体設計、事業所は算定要件と減算リスク管理</h4>
+      <p>全体の枠配分はケアマネジャーが行いますが、事業所側も自社の算定要件や枠内外のルールの理解が必須です。</p>
+    </div>
+
+    <div class="toc">
+      <h2>目次</h2>
+      <ul>
+        <li><a href="#sec1">1. 先に押さえる訂正ポイント</a></li>
+        <li><a href="#sec2">2. 制度の全体像</a></li>
+        <li><a href="#sec3">3. 区分支給限度基準額の一覧表</a></li>
+        <li><a href="#sec4">4. 事業所収入の基本式</a></li>
+        <li><a href="#sec5">5. 訪問看護セクション</a></li>
+        <li><a href="#sec6">6. 通所介護セクション</a></li>
+        <li><a href="#sec7">7. ケアマネと事業所の役割分担</a></li>
+        <li><a href="#sec8">8. 加算取得・届出・チェック体制</a></li>
+        <li><a href="#sec9">9. 最後のまとめ（超シンプル整理）</a></li>
+        <li><a href="#sec10">10. 主な参照資料</a></li>
+      </ul>
+    </div>
+
+    <h2 id="sec1">1. 先に押さえる訂正ポイント</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 40%">誤解しやすい言い方</th>
+          <th style="width: 60%">実務での正確な理解</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>「上限額 = 利用者の自己負担上限」</td>
+          <td>「上限額 = <span class="badge">介護保険給付で使えるサービス量の上限</span>。超過分は全額自己負担」</td>
+        </tr>
+        <tr>
+          <td>「事業所が保険料を囲い込む」</td>
+          <td>「事業所が取り込むのは保険料ではなく、ケアプランに位置づいた自社サービス分の報酬」</td>
+        </tr>
+        <tr>
+          <td>「加算は自由なオプション」</td>
+          <td>「<span class="badge">加算</span>は国が定めた要件を満たした場合のみ算定できる公定ルール」</td>
+        </tr>
+        <tr>
+          <td>「枠管理はケアマネだけ分かっていればよい」</td>
+          <td>「全体管理はケアマネだが、事業所も自社加算・減算・枠内外の理解が必要」</td>
+        </tr>
+        <tr>
+          <td>「訪問看護の売上は要介護度で決まる」</td>
+          <td>
+            「介護保険の訪問看護は主に訪問時間・提供者区分・加算体制で決まり、要介護度そのもので基本報酬が決まるわけではない」
+          </td>
+        </tr>
+        <tr>
+          <td>「専門管理加算は医療保険の話だけ」</td>
+          <td>「令和6年度介護報酬改定で、介護保険の訪問看護にも専門管理加算（250単位/月）が新設された」</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="sec2">2. 制度の全体像</h2>
+    <h3>介護保険と医療保険の違い</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>介護保険</th>
+          <th>医療保険</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>基本の仕組み</td>
+          <td>
+            居宅サービスでは要支援・要介護ごとの<span class="badge">区分支給限度基準額</span>の範囲でケアプランを組む
+          </td>
+          <td>ケアプランの月枠方式ではなく、医療費総額に自己負担割合がかかる</td>
+        </tr>
+        <tr>
+          <td>利用者自己負担</td>
+          <td>原則1割（一定以上所得者は2割または3割）</td>
+          <td>年齢や所得により原則1〜3割</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>医療保険の自己負担割合（原則）</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>年齢層</th>
+          <th>原則の自己負担割合</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>70歳未満</td>
+          <td>原則 3割</td>
+        </tr>
+        <tr>
+          <td>70〜74歳</td>
+          <td>原則 2割（現役並み所得者は3割）</td>
+        </tr>
+        <tr>
+          <td>75歳以上</td>
+          <td>原則 1割（一定所得以上は2割、現役並み所得者は3割）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="sec3">3. 区分支給限度基準額の一覧表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>要介護度</th>
+          <th>支給限度基準額（単位/月）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>要支援1</td>
+          <td>5,032</td>
+        </tr>
+        <tr>
+          <td>要支援2</td>
+          <td>10,531</td>
+        </tr>
+        <tr>
+          <td>要介護1</td>
+          <td>16,765</td>
+        </tr>
+        <tr>
+          <td>要介護2</td>
+          <td>19,705</td>
+        </tr>
+        <tr>
+          <td>要介護3</td>
+          <td>27,048</td>
+        </tr>
+        <tr>
+          <td>要介護4</td>
+          <td>30,938</td>
+        </tr>
+        <tr>
+          <td>要介護5</td>
+          <td>36,217</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note-box">
+      ※在宅系の居宅サービス等の支給限度基準額です。<span class="badge">対象外</span>の加算・サービスもあります。
+    </p>
+
+    <h2 id="sec4">4. 事業所収入の基本式</h2>
+    <div class="formula-box">事業所収入 = （基本報酬単位 + 加算単位 − 減算単位） × 地域区分の1単位単価</div>
+    <p>
+      事業所の収入（売上）は、<strong>保険給付分 + 利用者自己負担分</strong>で構成されます。また、1単位あたりの単価は地域区分（人件費等の地域差）によって異なります。本資料の数値は原則として「単位」ベースで記載しています。
+    </p>
+
+    <h2 id="sec5">5. 訪問看護セクション</h2>
+
+    <h3>6-1. 制度面の位置づけ</h3>
+    <p>
+      介護保険の訪問看護（要介護者向け）では、基本報酬は主として「訪問時間」「事業所区分（ステーション/病院・診療所）」「提供者区分」で決まります。
+    </p>
+    <div class="note-box">
+      【注意】医療保険の訪問看護とは算定ルールや加算構造が異なるため、混同しないよう注意が必要です。
+    </div>
+
+    <h3>6-2. 基本報酬表（要介護者向け、代表例）</h3>
+    <h4>表A: 指定訪問看護ステーション</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>時間区分・提供者</th>
+          <th>単位数（1回あたり）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20分未満</td>
+          <td>313単位</td>
+        </tr>
+        <tr>
+          <td>30分未満</td>
+          <td>470単位</td>
+        </tr>
+        <tr>
+          <td>30分以上1時間未満</td>
+          <td>821単位</td>
+        </tr>
+        <tr>
+          <td>1時間以上1時間30分未満</td>
+          <td>1,125単位</td>
+        </tr>
+        <tr>
+          <td>理学療法士・作業療法士・言語聴覚士による訪問</td>
+          <td>293単位（※1日2回超は90/100）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>表B: 病院・診療所</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>時間区分</th>
+          <th>単位数（1回あたり）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20分未満</td>
+          <td>265単位</td>
+        </tr>
+        <tr>
+          <td>30分未満</td>
+          <td>398単位</td>
+        </tr>
+        <tr>
+          <td>30分以上1時間未満</td>
+          <td>573単位</td>
+        </tr>
+        <tr>
+          <td>1時間以上1時間30分未満</td>
+          <td>842単位</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>6-3. 訪問看護の主要加算表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>単位</th>
+          <th>ポイント</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge">初回加算</span></td>
+          <td>300単位/月</td>
+          <td>新規利用時等</td>
+        </tr>
+        <tr>
+          <td><span class="badge">緊急時訪問看護加算</span></td>
+          <td>ステーション: 574単位/月<br>病院・診療所: 315単位/月</td>
+          <td>24時間連絡・対応体制</td>
+        </tr>
+        <tr>
+          <td>特別管理加算(I)</td>
+          <td>500単位/月</td>
+          <td>重症度・医療依存度が高い利用者</td>
+        </tr>
+        <tr>
+          <td>特別管理加算(II)</td>
+          <td>250単位/月</td>
+          <td>医療処置等が必要な利用者</td>
+        </tr>
+        <tr>
+          <td>専門管理加算</td>
+          <td>250単位/月</td>
+          <td>専門・特定行為研修修了者による計画的管理（令和6年新設）</td>
+        </tr>
+        <tr>
+          <td>退院時共同指導加算</td>
+          <td>600単位/回</td>
+          <td>退院時の医療機関との連携</td>
+        </tr>
+        <tr>
+          <td>看護体制強化加算(I)</td>
+          <td>550単位/月</td>
+          <td>重度者や看取りの実績等体制評価</td>
+        </tr>
+        <tr>
+          <td>看護体制強化加算(II)</td>
+          <td>200単位/月</td>
+          <td>体制評価（Iよりやや緩和）</td>
+        </tr>
+        <tr>
+          <td>ターミナルケア加算</td>
+          <td>2,000単位</td>
+          <td>死亡日及びその前14日以内の看取り対応</td>
+        </tr>
+        <tr>
+          <td>複数名訪問加算</td>
+          <td>時間・職種により区分あり</td>
+          <td>同時に2名で訪問する場合</td>
+        </tr>
+        <tr>
+          <td>夜間・早朝 / 深夜加算</td>
+          <td>所定単位の25/100増 / 50/100増</td>
+          <td>時間帯による割増</td>
+        </tr>
+        <tr>
+          <td>サービス提供体制強化加算</td>
+          <td>区分あり</td>
+          <td>職員の専門性や勤続年数等（枠外加算の代表例）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>6-4. 訪問看護の主要減算表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>同一建物減算</td>
+          <td>同一建物に居住する利用者が20人以上で90/100、50人以上で85/100を算定</td>
+        </tr>
+        <tr>
+          <td>准看護師による訪問</td>
+          <td>所定単位数の98/100を算定</td>
+        </tr>
+        <tr>
+          <td>理学療法士等による訪問の新設減算</td>
+          <td>
+            前年度のリハ職訪問回数が看護職員訪問回数を超える、又は緊急時・特別管理・看護体制強化加算をいずれも算定していない場合、1回につき8単位減算
+          </td>
+        </tr>
+        <tr>
+          <td>12月超利用時の減算見直し<br><small>※介護予防も含む関連改定</small></td>
+          <td>介護予防訪問看護において1回につき5単位減算。上記8単位減算対象の場合はさらに15単位減算</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>6-5. 支給限度額管理の対象外（訪問看護）</h3>
+    <ul>
+      <li>☑ <span class="badge">緊急時訪問看護加算</span></li>
+      <li>☑ 特別管理加算</li>
+      <li>☑ ターミナルケア加算</li>
+      <li>☑ サービス提供体制強化加算</li>
+      <li>☑ 特別地域訪問看護加算</li>
+      <li>☑ 中山間地域等における小規模事業所加算</li>
+      <li>☑ 中山間地域等に居住する者へのサービス提供加算</li>
+    </ul>
+    <p>
+      ※<span class="badge">対象外</span> =
+      利用者負担が生じない、という意味ではありません。「支給限度額管理の枠組みを消費しない」という意味です。
+    </p>
+
+    <h3>6-6. 実務メモ</h3>
+    <ul>
+      <li>重症者対応・緊急対応・看取り・特別管理などのニーズに対応できると、1人当たりの売上が厚くなりやすいです。</li>
+      <li>ただし、事前に要件を満たす体制整備・届出を行い、適切な記録を残さないと算定できません。</li>
+      <li>リハビリ職による訪問に偏重した運営に対しては、令和6年度改定で評価の適正化（減算）が入っています。</li>
+    </ul>
+
+    <h2 id="sec6">6. 通所介護セクション</h2>
+
+    <h3>7-1. 制度面の位置づけ</h3>
+    <p>
+      基本報酬は主に「サービス規模」「所要時間」「要介護度」で決まります。本資料では<strong>通常規模型を中心</strong>に整理しています。
+    </p>
+
+    <h3>7-2. 基本報酬表（通常規模型）</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>所要時間</th>
+          <th>要介護1</th>
+          <th>要介護2</th>
+          <th>要介護3</th>
+          <th>要介護4</th>
+          <th>要介護5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3時間以上4時間未満</td>
+          <td>370</td>
+          <td>423</td>
+          <td>479</td>
+          <td>533</td>
+          <td>588</td>
+        </tr>
+        <tr>
+          <td>4時間以上5時間未満</td>
+          <td>388</td>
+          <td>444</td>
+          <td>502</td>
+          <td>560</td>
+          <td>617</td>
+        </tr>
+        <tr>
+          <td>5時間以上6時間未満</td>
+          <td>570</td>
+          <td>673</td>
+          <td>777</td>
+          <td>880</td>
+          <td>984</td>
+        </tr>
+        <tr>
+          <td>6時間以上7時間未満</td>
+          <td>584</td>
+          <td>689</td>
+          <td>796</td>
+          <td>901</td>
+          <td>1,008</td>
+        </tr>
+        <tr>
+          <td>7時間以上8時間未満</td>
+          <td>658</td>
+          <td>777</td>
+          <td>900</td>
+          <td>1,023</td>
+          <td>1,148</td>
+        </tr>
+        <tr>
+          <td>8時間以上9時間未満</td>
+          <td>669</td>
+          <td>791</td>
+          <td>915</td>
+          <td>1,041</td>
+          <td>1,168</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><small>※大規模型・地域密着型通所介護等では単位数が異なります。</small></p>
+
+    <h3>7-3. 通所介護の主要加算表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>単位</th>
+          <th>ポイント</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>入浴介助加算(I)</td>
+          <td>40単位/日</td>
+          <td>入浴</td>
+        </tr>
+        <tr>
+          <td>入浴介助加算(II)</td>
+          <td>55単位/日</td>
+          <td>入浴（医師等の指示に基づく環境評価等）</td>
+        </tr>
+        <tr>
+          <td><span class="badge">個別機能訓練加算</span>(I)イ</td>
+          <td>56単位/日</td>
+          <td>機能訓練（専従配置）</td>
+        </tr>
+        <tr>
+          <td><span class="badge">個別機能訓練加算</span>(I)ロ</td>
+          <td>76単位/日</td>
+          <td>機能訓練</td>
+        </tr>
+        <tr>
+          <td>ADL維持等加算(I) / (II)</td>
+          <td>30単位/月 / 60単位/月</td>
+          <td>LIFE関連・アウトカム評価</td>
+        </tr>
+        <tr>
+          <td>栄養アセスメント加算</td>
+          <td>50単位/月</td>
+          <td>栄養・LIFE関連</td>
+        </tr>
+        <tr>
+          <td>栄養改善加算</td>
+          <td>200単位/回（月2回限度）</td>
+          <td>栄養</td>
+        </tr>
+        <tr>
+          <td>口腔連携強化加算</td>
+          <td>50単位/回（月1回限度）</td>
+          <td>口腔・歯科医療機関との連携</td>
+        </tr>
+        <tr>
+          <td>科学的介護推進体制加算</td>
+          <td>40単位/月</td>
+          <td>LIFE関連</td>
+        </tr>
+        <tr>
+          <td>認知症加算</td>
+          <td>60単位/日</td>
+          <td>認知症ケア対応</td>
+        </tr>
+        <tr>
+          <td>サービス提供体制強化加算</td>
+          <td>区分あり</td>
+          <td>体制加算</td>
+        </tr>
+        <tr>
+          <td>介護職員等処遇改善加算</td>
+          <td>I 9.2%、II 9.0%、III 8.0%、IV 6.4%</td>
+          <td>体制加算（所定単位数に乗じる）</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><small>※令和6年6月から、旧・介護職員処遇改善加算、介護職員等特定処遇改善加算、介護職員等ベースアップ等支援加算は、<span class="badge">介護職員等処遇改善加算</span>へ一本化されています。</small></p>
+
+    <h3>7-4. 通所介護の主要減算表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>高齢者虐待防止措置未実施減算</td>
+          <td>所定単位数の1/100減算</td>
+        </tr>
+        <tr>
+          <td>業務継続計画未策定減算</td>
+          <td>所定単位数の1/100減算</td>
+        </tr>
+        <tr>
+          <td>同一建物減算</td>
+          <td>1日につき94単位減算</td>
+        </tr>
+        <tr>
+          <td>送迎減算</td>
+          <td>片道47単位減算（事業所が送迎を行わない場合）</td>
+        </tr>
+        <tr>
+          <td>定員超過減算</td>
+          <td>基準に応じる</td>
+        </tr>
+        <tr>
+          <td>員数欠如減算</td>
+          <td>基準に応じる</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>7-5. 支給限度額管理の対象外（通所介護）</h3>
+    <ul>
+      <li>☑ サービス提供体制強化加算</li>
+      <li>☑ 介護職員等処遇改善加算</li>
+      <li>☑ 中山間地域等に居住する者へのサービス提供加算</li>
+    </ul>
+    <p>
+      <small>※算定構造上、感染症・災害による利用者数減少時の特例や同一建物減算など、加算以外の対象外項目もあります。</small>
+    </p>
+
+    <h3>7-6. 実務メモ</h3>
+    <ul>
+      <li>
+        入浴・個別機能訓練・栄養/口腔・LIFE関連の運用を組み合わせることで、1人当たりの算定単位に差が出やすくなります。
+      </li>
+      <li>
+        送迎、人員配置、定員管理、同一建物ルール、BCP策定、虐待防止措置など、運営基準を満たさないことによる減算リスクの管理が非常に重要です。
+      </li>
+      <li>介護職員等処遇改善加算は、枠外で効きやすい一方で、体制整備と適正な賃金配分ルールの理解が必要です。</li>
+    </ul>
+
+    <h2 id="sec7">7. ケアマネと事業所の役割分担</h2>
+    <div class="compare-container">
+      <div class="compare-col">
+        <h4>ケアマネジャー</h4>
+        <ul>
+          <li>利用者の状態や希望に基づく居宅サービス計画（ケアプラン）の作成</li>
+          <li>区分支給限度基準額全体の枠配分と管理</li>
+          <li>サービス事業者との連絡調整</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>サービス事業所</h4>
+        <ul>
+          <li>自社サービスの算定要件の確認と整備</li>
+          <li>適切な加算の提案と減算の予防・管理</li>
+          <li>利用者への説明、実施記録の作成、適正な報酬請求</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note-box">
+      【重要】制度の原則は利用者本位です。限度額に余裕があるからといって、単に単価の高いサービスを詰め込むようなプラン作成や提案は制度趣旨に反します。
+    </div>
+
+    <h2 id="sec8">8. 加算取得・届出・チェック体制</h2>
+    <div class="flow-box">
+      <div>体制整備</div>
+      <div>→</div>
+      <div>行政へ届出</div>
+      <div>→</div>
+      <div>受理後に算定開始</div>
+      <div>→</div>
+      <div>記録・請求業務</div>
+      <div>→</div>
+      <div>運営指導 / 監査対応</div>
+    </div>
+    <ul>
+      <li>そもそも算定の前提として、指定権者による指定を受け、人員・設備・運営基準を満たし続ける必要があります。</li>
+      <li>
+        加算を取得するには、事前に都道府県知事や市町村長等へ「介護給付費算定に係る体制等に関する届出」を行う必要があります。
+      </li>
+      <li>近年は「電子申請・届出システム」の利用が原則化・推進されています。</li>
+      <li>
+        <strong>運営指導</strong>では基準の遵守状況や報酬請求の適正性が確認されます。不正や重大な違反の疑いがある場合は、より重い<strong>監査</strong>が行われます。
+      </li>
+    </ul>
+
+    <h2 id="sec9">9. 最後のまとめ（超シンプル整理）</h2>
+    <div class="compare-container">
+      <div class="compare-col">
+        <h4>訪問看護</h4>
+        <ul>
+          <li>時間区分・提供者区分・医療ニーズ対応で単位が積み上がる構造。</li>
+          <li>緊急時対応、特別管理、看取り、専門性の高い看護が売上を押し上げるポイント。</li>
+          <li>リハビリ訪問への偏重、同一建物、体制不足には厳しい減算やルールが適用されるため注意が必要。</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>通所介護</h4>
+        <ul>
+          <li>要介護度・利用時間・日々の運営オペレーションの質で差がつく構造。</li>
+          <li>入浴、個別機能訓練、栄養・口腔ケア、LIFEデータの提出が主要な積み上げ要素。</li>
+          <li>送迎運用、人員・定員基準の維持、BCPや虐待防止措置などの運営体制不備による減算に注意が必要。</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="sec10">10. 主な参照資料</h2>
+    <ul>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/12300000/001195509.pdf" target="_blank">介護報酬の算定構造（厚生労働省）</a>
+      </li>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/12300000/001195261.pdf" target="_blank">令和6年度介護報酬改定の主な事項について</a>
+      </li>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/12300000/001213182.pdf" target="_blank">令和6年度介護報酬改定における改定事項について</a>
+      </li>
+      <li><a href="https://www.mhlw.go.jp/stf/newpage_38790.html" target="_blank">令和6年度介護報酬改定について</a></li>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/12300000/001258092.pdf" target="_blank">介護給付費算定に係る体制等に関する届出等における留意点について</a>
+      </li>
+      <li>
+        <a href="https://www.mhlw.go.jp/stf/kaigo-shinsei.html" target="_blank">介護事業所の指定申請等のウェブ入力・電子申請について</a>
+      </li>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/12300000/001281524.pdf" target="_blank">介護保険施設等運営指導マニュアル</a>
+      </li>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/001274674.pdf" target="_blank">介護保険施設等に対する監査マニュアル</a>
+      </li>
+      <li>
+        <a href="https://www.mhlw.go.jp/content/000937919.pdf" target="_blank">医療費の一部負担（自己負担）割合について</a>
+      </li>
+    </ul>
+
+    <div class="footer-note">
+      本資料は学習用整理です。算定要件・解釈通知・自治体運用で細部が変わるため、実請求・届出には最新の告示・通知・自治体案内を必ず確認してください。
+    </div>
+  
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>
